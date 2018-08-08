@@ -1,15 +1,10 @@
 FROM node
 MAINTAINER Markus Kosmal <b@m-ko.de>
+WORKDIR /opt/haste
 
 RUN git clone https://github.com/seejohnrun/haste-server.git /opt/haste
-WORKDIR /opt/haste
-RUN rm /opt/haste/about.md
-ADD conf/about.md /opt/haste/
+ADD . /opt/haste/
 RUN npm install
-
-ADD conf/config.js /opt/haste/config.js
-
-VOLUME ["/opt/haste"]
 
 RUN chgrp -R 0 /opt/haste \
   && chmod -R g+rwX /opt/haste
