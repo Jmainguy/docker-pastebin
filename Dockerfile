@@ -11,5 +11,7 @@ ADD conf/config.js /opt/haste/config.js
 
 VOLUME ["/opt/haste"]
 
+RUN chgrp -R 0 /opt/haste \
+  && chmod -R g+rwX /opt/haste
 EXPOSE 80
 CMD ["npm", "start"]
