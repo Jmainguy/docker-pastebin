@@ -8,5 +8,5 @@ RUN npm install
 
 RUN chgrp -R 0 /opt/haste \
   && chmod -R g+rwX /opt/haste
-EXPOSE 80
+EXPOSE 25565
 CMD ["npm", "start"]
