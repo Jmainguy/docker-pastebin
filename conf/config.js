@@ -2,10 +2,9 @@
 
   "host": "0.0.0.0",
   "port": 25565,
+  "maxLength": 86400,
 
   "keyLength": 10,
-
-  "maxLength": 400000,
 
   "staticMaxAge": 86400,
 
